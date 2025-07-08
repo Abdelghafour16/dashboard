@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes swim-left {
+  0% {
+    transform: translateX(calc(100vw + 50px)) translateY(0px);
+  }
+  100% {
+    transform: translateX(-50px) translateY(-20px);
+  }
+}
+
+@keyframes swim-right {
+  0% {
+    transform: translateX(-50px) translateY(0px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(calc(100vw + 50px)) translateY(-20px) scaleX(-1);
+  }
+}
+
+.animate-swim-left {
+  animation: swim-left 15s linear infinite;
+}
+
+.animate-swim-right {
+  animation: swim-right 18s linear infinite;
+}
